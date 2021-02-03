@@ -77,14 +77,14 @@ def prefix_to_postfix(input_str):
     
     tokenStack = Stack(30)
     tokens = input_str.split()
-    tempList = ["first", "second", "operator"]
-    i = -1
+    tempList = ["first", "second", "operator"]      # List used for joining tokens. Only needs to have a size of 3
+    i = -1                                          # Using i to walk backwards through tokens list
     while i >= len(tokens) * -1:
-        if tokens[i] in operators:
+        if tokens[i] in operators:                  # Compare token against operator tuple
             tempList[0] = tokenStack.pop()
             tempList[1] = tokenStack.pop()
             tempList[2] = tokens[i]
-            tokenStack.push(" ".join(tempList))
+            tokenStack.push(" ".join(tempList))     # Join string using a space as the separator
         else:
             tokenStack.push(tokens[i])
         i -= 1
