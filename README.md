@@ -2,6 +2,6 @@
 
 Name: Patrick Salter
 
-Progress: Functions implemented, testing against instructor test cases
+Progress: Completed
 
 Partner: Josh Simpson
